@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xtermjs</title>
+    <link rel="stylesheet" href="/webjars/xterm/2.9.2/dist/xterm.css" />
+    <script type="application/javascript" src="/webjars/xterm/2.9.2/dist/xterm.js"></script>
+    <script type="application/javascript" src="/webjars/xterm/2.9.2/dist/addons/attach/attach.js"></script>
+</head>
+<body>
+    <div style="width:1000px;" id="xterm"></div>
+    <script type="application/javascript">
+        var term = new Terminal({
+            cursorBlink: false,
+            cols: 100,
+            rows: 50
+        });
+        term.open(document.getElementById('xterm'));
+        var socket = new WebSocket('ws://localhost:8080/ws/container/exec?width=100&height=50&ip=192.168.93.129&containerId=5f045d86d0f9b5b0ba6d747b82d688b939a87ae85e71e9ed947dcb37a6f34dfc');
+        term.attach(socket);
+        term.focus();
+    </script>
+</body>
+</html>
