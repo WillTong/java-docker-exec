@@ -4,7 +4,8 @@ import com.spotify.docker.client.DefaultDockerClient;
 import com.spotify.docker.client.DockerClient;
 
 /**
- * Created by will on 2017/9/4.
+ * docker操作类.
+ * @author will
  */
 public class DockerHelper {
     public static void execute(String ip,DockerAction dockerAction)throws Exception{
@@ -18,10 +19,6 @@ public class DockerHelper {
         T result=dockerQuery.action(docker);
         docker.close();
         return result;
-    }
-
-    public static DockerClient getDocker(String ip){
-        return DefaultDockerClient.builder().uri("http://".concat(ip).concat(":2375")).apiVersion("v1.30").build();
     }
 
     public interface DockerAction {

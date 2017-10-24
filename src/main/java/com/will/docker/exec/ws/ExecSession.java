@@ -3,7 +3,9 @@ package com.will.docker.exec.ws;
 import java.net.Socket;
 
 /**
- * Created by will on 2017/9/26.
+ * websocket的session.
+ * <p>用于区分不同的连接</p>
+ * @author will
  */
 public class ExecSession {
     private String ip;

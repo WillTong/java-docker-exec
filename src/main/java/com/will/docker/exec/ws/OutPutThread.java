@@ -7,7 +7,9 @@ import java.io.InputStream;
 import java.util.Date;
 
 /**
- * Created by will on 2017/9/21.
+ * 输出线程.
+ * <p>使用线程输出，方式流等待卡住</p>
+ * @author will
  */
 public class OutPutThread extends Thread {
     private InputStream inputStream;

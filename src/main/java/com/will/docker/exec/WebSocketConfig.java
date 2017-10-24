@@ -11,7 +11,8 @@ import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry
 import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 
 /**
- * Created by will on 2017/9/14.
+ * 加载websocket.
+ * @author will
  */
 @Configuration
 @EnableWebSocket

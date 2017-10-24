@@ -9,7 +9,9 @@ import org.springframework.web.socket.server.support.HttpSessionHandshakeInterce
 import java.util.Map;
 
 /**
- * Created by will on 2017/9/14.
+ * websocket拦截器.
+ * <p>主要用于获得传参，ip,containerId,width,height</p>
+ * @author will
  */
 public class ContainerExecHandshakeInterceptor extends HttpSessionHandshakeInterceptor {
     @Override
